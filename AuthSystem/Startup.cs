@@ -30,12 +30,10 @@ namespace AuthSystem
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-
             services.AddControllersWithViews();
-            services.AddRazorPages(); // add razor page 
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +56,7 @@ namespace AuthSystem
             app.UseRouting();
 
             app.UseAuthentication();
-            app.UseAuthorization(); // add use authortication and use authorization
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
