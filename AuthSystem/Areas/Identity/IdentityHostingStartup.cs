@@ -21,8 +21,14 @@ namespace AuthSystem.Areas.Identity
                         options.UseSqlServer(
                             context.Configuration.GetConnectionString("AuthDbContextContextConnection")));
 
-                    services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                        .AddEntityFrameworkStores<AuthDbContext>();
+                    services.AddDefaultIdentity<ApplicationUser>(options =>
+                        {
+                            options.SignIn.RequireConfirmedAccount = false;
+                            options.Password.RequireLowercase = false;
+                            options.Password.RequireUppercase = false;
+                        }
+                        
+                        ).AddEntityFrameworkStores<AuthDbContext>();
                 });
             });
         }
