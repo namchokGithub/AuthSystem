@@ -16,6 +16,14 @@ namespace AuthSystem.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
+                builder.ConfigureServices((context, services) => {
+                    services.AddDbContext<AuthDbContext>(options =>
+                        options.UseSqlServer(
+                            context.Configuration.GetConnectionString("AuthDbContextContextConnection")));
+
+                    services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                        .AddEntityFrameworkStores<AuthDbContext>();
+                });
             });
         }
     }
