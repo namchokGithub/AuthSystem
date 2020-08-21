@@ -8584,11 +8584,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Namchok\\source\\repos\\Identity\\Identity\\Identity.csproj",
+      "projectUniqueName": "D:\\New folder\\AuthSystem\\Identity\\Identity.csproj",
       "projectName": "Identity",
-      "projectPath": "C:\\Users\\Namchok\\source\\repos\\Identity\\Identity\\Identity.csproj",
+      "projectPath": "D:\\New folder\\AuthSystem\\Identity\\Identity.csproj",
       "packagesPath": "C:\\Users\\Namchok\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Namchok\\source\\repos\\Identity\\Identity\\obj\\",
+      "outputPath": "D:\\New folder\\AuthSystem\\Identity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Namchok\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8656,7 +8656,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
